@@ -1,0 +1,30 @@
+{
+    "name": "scchethu/bs-wire-modal",
+    "description": "bootstrap 4 based livewire modal",
+    "type": "library",
+    "require": {
+        "livewire/livewire": "^2.7",
+        "spatie/laravel-package-tools": "^1.9"
+    },
+    "license": "MIT",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BsWireModal\\BsWireModalServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "BsWireModal\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "scchethu",
+            "email": "psi.palmate@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
