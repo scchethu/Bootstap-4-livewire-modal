@@ -3,7 +3,7 @@
     "description": "bootstrap 4 based livewire modal",
     "type": "library",
     "require": {
-        "livewire/livewire": "^2.7",
+        "livewire/livewire": "^2.0",
         "spatie/laravel-package-tools": "^1.9"
     },
     "license": "MIT",
@@ -22,7 +22,7 @@
     "authors": [
         {
             "name": "scchethu",
-            "email": "psi.palmate@gmail.com"
+            "email": "scchethu@gmail.com"
         }
     ],
     "minimum-stability": "dev",
