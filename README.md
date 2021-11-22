@@ -81,4 +81,4 @@ If you are new to Livewire I recommend to take a look at the [security details](
 
 
 ## License
-WireElements is open-sourced software licensed under the [MIT license](LICENSE.md).
+Boostrap 4 Wire Modal is open-sourced software licensed under the [MIT license](LICENSE.md).
