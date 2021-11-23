@@ -6,9 +6,9 @@
                 <!-- Modal Header -->
                 <div class="modal-header">
                     <h4 class="modal-title">
-                        @if($title)
-                            {{$title}}
-                        @endif
+                        @isset($componentAttributes['title'])
+                            {{$componentAttributes['title']}}
+                        @endisset
                     </h4>
                     <button type="button" class="close" wire:click="$emitSelf('closeModal')"  data-dismiss="modal">
                         &times;
@@ -18,7 +18,11 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     @if(isset($component))
-                        @livewire($component)
+                        @if(isset($componentAttributes['id']))
+                        @livewire($component,['id'=>$componentAttributes['id']])
+                        @else
+                            @livewire($component)
+                            @endif
                     @endif
                 </div>
 

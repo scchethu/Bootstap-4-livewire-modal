@@ -8,11 +8,12 @@ class BsModal extends Component
 {
     protected $listeners = ['openModal','closeModal'];
     public $component = null;
-    public $title = null;
-    public function openModal($component,$title='')
+    public $componentAttributes = [];
+    public function openModal($component,$componentAttributes = [], $modalAttributes = [])
     {
+
         $this->component = $component;
-        $this->title = $title;
+        $this->componentAttributes = $componentAttributes;
         $this->dispatchBrowserEvent('openModalInBrowser');
     }
     public function closeModal()
