@@ -1,6 +1,6 @@
 <div>
     <div id="modal_bs4_wire" class="modal">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
 
                 <!-- Modal Header -->
@@ -10,7 +10,7 @@
                             {{$componentAttributes['title']}}
                         @endisset
                     </h4>
-                    <button type="button" class="close" wire:click="$emitSelf('closeModal')"  data-dismiss="modal">
+                    <button type="button" class="close" wire:click="$emitSelf('closeModal')" data-dismiss="modal">
                         &times;
                     </button>
                 </div>
@@ -19,10 +19,10 @@
                 <div class="modal-body">
                     @if(isset($component))
                         @if(isset($componentAttributes['id']))
-                        @livewire($component,['id'=>$componentAttributes['id']])
+                            @livewire($component,['id'=>$componentAttributes['id']])
                         @else
-                            @livewire($component)
-                            @endif
+                            @livewire($component,['id'=>null])
+                        @endif
                     @endif
                 </div>
 
