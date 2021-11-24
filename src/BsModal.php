@@ -15,6 +15,13 @@ class BsModal extends Component
         $this->component = $component;
         $this->componentAttributes = $componentAttributes;
         $this->dispatchBrowserEvent('openModalInBrowser');
+        if(isset($componentAttributes['id'])) {
+            $this>$this->emitTo($component,'editForm',$componentAttributes['id']);
+        }
+        else
+        {
+            $this>$this->emitTo($component,'addForm');
+        }
     }
     public function closeModal()
     {

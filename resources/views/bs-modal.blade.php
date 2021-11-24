@@ -18,11 +18,7 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     @if(isset($component))
-                        @if(isset($componentAttributes['id']))
-                            @livewire($component,['id'=>$componentAttributes['id']])
-                        @else
-                            @livewire($component,['id'=>null])
-                        @endif
+                            @livewire($component)
                     @endif
                 </div>
 
