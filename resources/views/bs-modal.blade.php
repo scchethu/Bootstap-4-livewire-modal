@@ -1,5 +1,5 @@
 <div>
-    <div id="modal_bs4_wire" class="modal">
+    <div id="modal_bs4_wire" class="modal" >
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
 
@@ -18,7 +18,7 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     @if(isset($component))
-                            @livewire($component)
+                        @livewire($component)
                     @endif
                 </div>
 
@@ -35,7 +35,11 @@
 </div>
 <script>
     window.addEventListener('openModalInBrowser', event => {
-        $('#modal_bs4_wire').modal('show');
+        $('#modal_bs4_wire').modal( {
+            backdrop: 'static',
+            keyboard: false,
+            show:true
+        });
     })
     window.addEventListener('closeModalInBrowser', event => {
         $('#modal_bs4_wire').modal('hide');
