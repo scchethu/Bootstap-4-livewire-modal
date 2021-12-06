@@ -18,7 +18,7 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     @if(isset($component))
-                        @livewire($component)
+                        @livewire($component,key($component))
                     @endif
                 </div>
 
