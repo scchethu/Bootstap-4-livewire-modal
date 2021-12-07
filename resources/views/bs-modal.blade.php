@@ -35,11 +35,7 @@
 </div>
 <script>
     window.addEventListener('openModalInBrowser', event => {
-        $('#modal_bs4_wire').modal( {
-            backdrop: 'static',
-            keyboard: false,
-            show:true
-        });
+        $('#modal_bs4_wire').modal('show');
     })
     window.addEventListener('closeModalInBrowser', event => {
         $('#modal_bs4_wire').modal('hide');
