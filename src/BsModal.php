@@ -10,6 +10,7 @@ class BsModal extends Component
     public $component = null;
     public $componentAttributes = [];
 
+	/*
     public function openModal($component, $componentAttributes = [], $modalAttributes = [])
     {
 
@@ -22,7 +23,20 @@ class BsModal extends Component
             $this > $this->emitTo($component, 'addForm');
         }
     }
-
+*/
+public function openModal($component, $componentAttributes = [], $modalAttributes = [])
+    {
+        $this->component = $component;
+        $this->componentAttributes = $componentAttributes;
+        $this->dispatchBrowserEvent('openModalInBrowser');
+        if (isset($componentAttributes['id'])) {
+            $this > $this->emitTo($component, 'editForm', $componentAttributes['id']);
+        } elseif(isset($componentAttributes['customer_id'])) {
+            $this > $this->emitTo($component, 'addForm', $componentAttributes['customer_id']);
+        }else {
+            $this > $this->emitTo($component, 'addForm');
+        }
+    }
     public function dehydrate()
     {
         $this->component = null;
