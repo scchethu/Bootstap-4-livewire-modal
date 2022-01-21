@@ -32,7 +32,7 @@ public function openModal($component, $componentAttributes = [], $modalAttribute
         if (isset($componentAttributes['id'])) {
             $this > $this->emitTo($component, 'editForm', $componentAttributes['id']);
         } elseif(isset($componentAttributes['customer_id'])) {
-            $this > $this->emitTo($component, 'addForm', $componentAttributes['customer_id']);
+            $this > $this->emitTo($component, 'addFormWithCustomerID', $componentAttributes['customer_id']);
         }else {
             $this > $this->emitTo($component, 'addForm');
         }
